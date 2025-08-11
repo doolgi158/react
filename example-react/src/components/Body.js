@@ -14,14 +14,8 @@ const Body=()=>{
 
     const show = ()=>{
         console.log(`안녕하세요. ${form.name} (${form.age}세) 님!`);
-        let name = document.getElementById("name").value;
-        let age = document.getElementById("id").value;
-
-        //return let string = "안녕하세요 " + name + "(" + age + ") " + 님!;
     };
     
-
-
     return(
         <form className="form">
             <div>
