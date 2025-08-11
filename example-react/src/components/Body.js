@@ -1,63 +1,52 @@
-import{useState} from "react";
+import { useState } from "react";
+const Body=()=>{
+    const [form, setForm] = useState({
+        name:"홍길동",
+        age :25
+    });
 
-const Body = () => {
-    const[name, setName] = useState("");
-    const[gender, setGender] = useState("");
-    const[birth, setBirth] = useState("");
-    const[bio, setBio] = useState("");
-
-    const onChangeName = (e) => {
-        setName(e.target.value);
+    const handelForm = (e)=>{
+        setForm({
+            ...form,
+            [e.target.name]:e.target.value
+        });
     };
 
-    const onChangeGender = (e) => {
-        setGender(e.target.value);
+    const show = ()=>{
+        console.log(`안녕하세요. ${form.name} (${form.age}세) 님!`);
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("id").value;
+
+        //return let string = "안녕하세요 " + name + "(" + age + ") " + 님!;
     };
+    
 
-    const onChangeBirth = (e) => {
-        setBirth(e.target.value);
-    };
 
-    const onChangeBio = (e) => {
-        setBio(e.target.value);
-        
-        if(e.key === "Enter"){
-            const biotext = document.getElementById("bioid").value;
-            setBio("");
-        }
-    };
-
-    return (
-        <div>
+    return(
+        <form className="form">
             <div>
-                <input value={name} onChange={onChangeName} placeholder="이름" />
+                <label htmlFor="name">이름: </label>
+                <input type="text" 
+                id="name" 
+                name="name" 
+                value={form.name} 
+                onChange={handelForm} />
             </div>
-            
             <div>
-                <select value={gender} onChange={onChangeGender}>
-                    <option key={""}></option>
-                    <option key={"남성"}>남성</option>
-                    <option key={"여성"}>여성</option>
-                </select>
+                <label htmlFor="age">나이: </label>
+                <input type="number"
+                id="age"
+                name="age"
+                value={form.age}
+                onChange={handelForm} />
             </div>
+            <div>
+                <button type="button" onClick={show}>출력</button>
+            </div>
+            <p>안녕하세요 {form.name}({form.age}세) 님!</p>
 
-            <div>
-                <input type="date" value={birth} onChange={onChangeBirth} />
-            </div>
-
-            <div>
-                <textarea value={bio} onKeyDown={onChangeBio} id="bioid" placeholder="메모"/>
-            </div>
-
-            <h4>데이터 출력</h4>
-            <div>
-                <label>이름 : </label>{name}<br />
-                <label>성별 : </label>{gender}<br />
-                <label>생년월일 : </label>{birth}<br />
-                <label></label>{bio}<bir />
-            </div>
-        </div>
-    );
-};
+        </form>
+    )
+}
 
 export default Body;
