@@ -1,18 +1,5 @@
-.App{
+.App {
   text-align: center;
-}
-
-li {
-  list-style: none;
-}
-
-span {
-  margin: 5px;
-}
-
-table {
-  display: flex;
-  justify-content: center;
 }
 
 .App-logo {
