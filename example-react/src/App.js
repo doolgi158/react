@@ -1,26 +1,12 @@
 import './App.css';
-import Header from "./components/Header.js";
-import Body from "./components/Body.js";
-import Footer from "./components/Footer.js";
+import NoticeMain from "./notice/NoticeMain.js";
 
 const App = () => {
   return (
     <div className="App">
-      <Header />
-      <Body />
-      <Footer />
+      <NoticeMain />
     </div>
   );
 };
 
 export default App;
-
-/*const App = () => {
-  return (
-    <div className="App">
-      <Header />
-      <Body />
-      <Footer />
-    </div>
-  );
-};*/

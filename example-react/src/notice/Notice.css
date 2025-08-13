@@ -1,0 +1,47 @@
+.container {
+    width: 700px;
+    margin: auto;
+}
+button {
+    margin: 5px;
+    width: 50px;
+}
+.tablediv {
+    display: flex;
+    justify-content: center;
+}
+
+.display {
+    background-color: white;
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    background-color: rgb(216, 234, 255);
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+td:nth-child(1) {
+    width: 10%;
+}
+
+td:nth-child(2) {
+    width: 50%;
+    border-left: 0px;
+}
+
+td:nth-child(3) {
+    width: 20%;
+    border-left: 0px;
+}
+
+td:nth-child(4) {
+    width: 20%;
+    border-left: 0px;
+}

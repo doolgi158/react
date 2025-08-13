@@ -1,4 +1,6 @@
 import { useState } from "react";
+import './Body.css';
+
 const Body=()=>{
     const [form, setForm] = useState({
         name:"홍길동",
