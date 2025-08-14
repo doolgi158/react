@@ -1,14 +1,147 @@
 .container {
-    width: 700px;
-    margin: auto;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f8f9fa;
+    padding:20px;
 }
-button {
-    margin: 5px;
-    width: 50px;
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1f3c88;
 }
-.tablediv {
+
+.Notice {
+    text-align: center;
+}
+
+.button{
+    text-align: right;
+    background-color: white;
+    padding: 8px;
+}
+
+.noticeButton {
+    float: right;
+    margin-left: 10px;
+}
+
+.actionButton{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.actionButton:hover {
+    opacity: 0.85;
+}
+
+.noticeButtonDetail {
+    margin-bottom: 5px;
+    background-color: #ffc107;
+    color: black;
+}
+
+.noticeButtonDelete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.searchBox {
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.inputSearch {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.searchButton {
+    padding: 8px 16px;
+    margin-right: 10px;
+    background-color: #1f3c88;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.searchButton:hover {
+    background-color: #162d66;
+}
+
+.inputForm {
+    padding: 15px;
+    padding-right: 35px;
+    background-color: #e9f0ff;
+    border: 1px solid rgb(216, 234, 255);
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.name, .title, .content{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    font-size: 14px;
+}
+
+.name {
+    width: 180px;
+}
+
+.title {
+    width: 300px;
+}
+
+.content {
+    height: 200px;
+    resize: none;
+}
+
+.inputButton {
+    padding: 8px 16px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.inputButton:hover {
+    background-color: #162d66;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
 }
 
 .display {
@@ -18,30 +151,25 @@ button {
 
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-td {
-    background-color: rgb(216, 234, 255);
-    border: 1px solid #000;
-    padding: 5px;
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
 }
 
-td:nth-child(1) {
-    width: 10%;
+th {
+    background-color: #1f3c88;
+    color: white;
+    font-weight: bold;
 }
 
-td:nth-child(2) {
-    width: 50%;
-    border-left: 0px;
-}
-
-td:nth-child(3) {
-    width: 20%;
-    border-left: 0px;
-}
-
-td:nth-child(4) {
-    width: 20%;
-    border-left: 0px;
+tr:hover {
+    background-color: #f1f5ff;
 }

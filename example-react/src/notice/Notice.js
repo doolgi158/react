@@ -17,9 +17,17 @@ const Notice = ({no, title, name, content, createdDate}) => {
             </tr>
 
             {display && (
-                <tr>
-                    <td className="display" colspan="4">{content}</td>
-                </tr>
+                <>
+                    <tr>
+                        <td className="display" colspan="4">
+                        <div className="noticeButton">
+                            <button className="noticeButtonDetail actionButton" type="button">수정</button><br/>
+                            <button className="noticeButtonDelete actionButton" type="button">삭제</button>
+                        </div>
+                            {content}
+                        </td>
+                    </tr>
+                </>
             )}
         </>
     );

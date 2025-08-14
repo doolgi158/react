@@ -1,6 +1,7 @@
 import './Notice.css';
+import NoticeForm from './NoticeForm.js';
 import NoticeList from './NoticeList.js';
-import {useState} from 'react';
+import {useState, useRef} from 'react';
 
 const NoticeMain = () => {
     const allList = [
@@ -28,16 +29,40 @@ const NoticeMain = () => {
     ];
 
     const [list, setList] = useState(allList);
+    const noRef = useRef(4);
+
+    const createContent = (name, title, content) => {
+        const newlist = {
+            no: noRef.current,
+            title,
+            name,
+            content,
+            createdDate: new Date().getTime(),
+        }
+        noRef.current += 1;
+
+        setList([...list, newlist]);
+        setInputDisplay(inputDisplay => !inputDisplay);
+    }
+
+    const [inputDisplay, setInputDisplay] = useState(false);
+
+    const inputButton = () => {
+        setInputDisplay(prev => !prev);
+    }
 
     return (
         <div className="container">
-            <h2>공지사항</h2><br />
-            <button type="button">작성</button>
-            <button type="button">수정</button>
-            <button type="button">삭제</button>
-            <button type="button">검색</button>
-            <hr />
-            <NoticeList list={list}/>
+            <div className="Notice">
+                <h1>공지사항</h1><br />
+                <div className="searchBox">
+                    <input className="inputSearch" type="text" placeholder='제목 입력'></input>
+                    <button type="button" className="searchButton">검색</button>
+                    <button type="button" className="searchButton" onClick={inputButton}>글작성</button>
+                </div>
+                <NoticeList list={list} />
+            </div>
+                {inputDisplay && (<NoticeForm createContent={createContent}/>)}
         </div>
     );
 };

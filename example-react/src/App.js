@@ -1,4 +1,3 @@
-import './App.css';
 import NoticeMain from "./notice/NoticeMain.js";
 
 const App = () => {
