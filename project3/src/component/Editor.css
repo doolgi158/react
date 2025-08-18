@@ -1,0 +1,78 @@
+.Editor {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: rgba(253, 246, 227, 0.95);
+    border: 2px solid #d2b48c;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(92, 64, 51, 0.3);
+    padding: 2rem;
+}
+
+.Editor .editor_section {
+    margin-bottom: 40px;
+}
+
+.Editor h4 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.Editor input, textarea {
+    border: none;
+    border-radius: 5px;
+    background-color: #ececec;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.Editor input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #7a5c3e;
+    margin-bottom: 1rem;
+}
+
+.Editor textarea {
+    width: 100%;
+    min-height: 200px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-size: 1.1rem;
+    padding: 1rem;
+    background-color: #fffdf5;
+    border: 1px solid #c2a46d;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.Editor .mood_box {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.mood {
+    font-size: 2rem;
+    padding: 0.8rem;
+    border: 2px dashed #a0522d;
+    background-color: #fffef0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.Editor .bottom_section {
+    display: flex;
+    /*첫 번째 자식 요소는 컨테이너의 시작 부분에 배치되고, 마지막 자식 요소는 컨테이너의 끝 부분에 배치*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Editor .emotion_list_wrapper {
+    display: flex;
+    /*자식 요소들 사이와 시작 및 끝 부분에 동일한 여백을 둔다*/
+    justify-content: space-around;
+    gap: 2%;
+}
