@@ -1,15 +1,14 @@
 .Button {
     cursor: pointer;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 10px 20px;
     font-size: 18px;
- 
-    font-family: inherit;
+    white-space: nowrap;
 }
 
 .Button_default {
-    background-color: #deb887;
+    background-color: #ececec;
     color: black;
 }
 
