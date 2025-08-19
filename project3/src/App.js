@@ -12,19 +12,19 @@ const mockData = [
   {
     id: "0",
     data: day.getTime(),
-    content: "asdf",
+    content: "첫번째 일기",
     emotionId: 1,
   },
   {
     id: "1",
     date: new Date(day).setDate(day.getDate() - 1),
-    content: "asdfasdf",
+    content: "두번째 일기",
     emotionId: 2,
   },
   {
     id: "2",
     date: new Date(day).setDate(day.getDate() - 2),
-    content: "asdfawadfawgaczvq2efgasdvzcx",
+    content: "세번째 일기",
     emotionId: 3,
   },
 ];
