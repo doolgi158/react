@@ -11,20 +11,20 @@ day.setDate(day.getDate() - 1);
 const mockData = [
   {
     id: "0",
-    data: day.getTime(),
-    content: "첫번째 일기",
+    date: day.getTime(),
+    content: "첫 번째 일기",
     emotionId: 1,
   },
   {
     id: "1",
     date: new Date(day).setDate(day.getDate() - 1),
-    content: "두번째 일기",
+    content: "두 번째 일기",
     emotionId: 2,
   },
   {
     id: "2",
     date: new Date(day).setDate(day.getDate() - 2),
-    content: "세번째 일기",
+    content: "세 번째 일기",
     emotionId: 3,
   },
 ];
@@ -59,7 +59,7 @@ export const DiaryStateContext = React.createContext();
 export const DiaryDispatchContext = React.createContext();
 
 const App = () => {
-  const [isDataLoaded, setIsDataLoaded] = useState(true);
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
   const [data, dispatch] = useReducer(reducer, []);
   const idRef = useRef(3);
 
@@ -68,7 +68,9 @@ const App = () => {
       type: "INIT",
       data: mockData,
     });
+    setIsDataLoaded(true);
   }, []);
+  
   const onCreate = (date, content, emotionId) => {
     dispatch({
       type: "CREATE",

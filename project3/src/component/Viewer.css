@@ -1,0 +1,81 @@
+.Viewer {
+    background-color: #fff8e1;
+    border-radius: 15px;
+    border: 2px solid #d2b48c;
+    box-shadow: 0 0 15px rgba(92, 64, 51, 0.3);
+}
+
+.Viewer section {
+    width: 100%;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Viewer h4 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0 12px 0;
+}
+
+.Viewer .emotion_img_wrapper {
+    background-color: #ececec;
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Viewer .emotion_img_wrapper_1 {
+    background-color: #c8e6c9;
+}
+
+.Viewer .emotion_img_wrapper_2 {
+    background-color: #dcedc8;
+}
+
+.Viewer .emotion_img_wrapper_3 {
+    background-color: #fff9c4;
+}
+
+.Viewer .emotion_img_wrapper_4 {
+    background-color: #ffcdd2;
+}
+
+.Viewer .emotion_img_wrapper_5 {
+    background-color: #ef9a9a;
+}
+
+.Viewer .emotion_descript {
+    font-size: 25px;
+    color: #333;
+}
+
+.Viewer .content_wrapper {
+    width: 90%;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    padding: 15px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.Viewer .content_wrapper p {
+    padding: 20px;
+    text-align: left;
+    font-size: 15px;
+    font-family: "Yeon Sung";
+    font-weight: 400;
+    line-height: 1.5;
+}

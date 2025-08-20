@@ -43,7 +43,11 @@ const Editor = ({initData, onSubmit}) => {
     };
 
     const handleSubmit = () => {
-        onSubmit(state);
+        if(state.content.trim() === ""){
+            alert("내용을 입력하세요");
+        } else {
+            onSubmit(state);
+        }
     };
 
     const handleGoBack = () => {

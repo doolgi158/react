@@ -8,16 +8,16 @@
 }
 
 .Button_default {
-    background-color: #ececec;
+    background-color: #dcdcdc;
     color: black;
 }
 
 .Button_positive {
-    background-color: #64c964;
+    background-color: #4caf50;
     color: white;
 }
 
 .Button_negative {
-    background-color: #fd565f;
+    background-color: #e53935;
     color: white;
 }
