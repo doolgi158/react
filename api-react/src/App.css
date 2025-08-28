@@ -1,71 +1,16 @@
-.App {
-  max-width: 1024px;
-  margin-top: 20px;
-  padding: 20px;
-  font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow-x: auto;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  background-color: #fff;
+.image {
+  width: 171px;
+  height: 180px;
 }
 
-h3 {
-  text-align: center;
-  margin-bottom: 20px;
+.table-td-width1 {
+  width: 120px;
 }
 
-.App-table {
-  min-width: 1200px;
-  border-collapse: separate;
-  width: 100%;
-  border-spacing: 0;
-  font-size: 14px;
-  color: #333;
+.table-td-width2 {
+  width: 460px;
 }
 
-.App-table th, .App-table td {
-  padding: 12px 16px;
-  border-bottom: 1px solid #eee;
-  text-align: left;
-  max-width: 200px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.App-table th {
-  background-color: #f9fafb;
-  font-weight: 600;
-  color: #444;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-
-.App-table tbody tr {
-  transition: background 0.2s ease;
-}
-
-.App-table tbody tr:hover {
-  background-color: rgba(255, 255, 0, 0.12);
-}
-
-.App-table td {
-  max-width: 200px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.App-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.App-table th:first-child, .App-table td:first-child {
-  border-top-left-radius: 12px;
-}
-
-.App-table th:last-child, .App-table td:last-child {
-  border-top-right-radius: 12px;
+.link {
+  text-decoration: none;
 }
