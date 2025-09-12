@@ -1,9 +1,9 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {useEffect, useState} from 'react';
+/*import 'bootstrap/dist/css/bootstrap.min.css';
 import {Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
-/*import Detail from './pages/Detail';
+import Detail from './pages/Detail';
 import List from './pages/List';
 
 export const stateContext = React.createContext();
@@ -13,9 +13,11 @@ const serviceKey = 'c774c8dc6067dd3fe310433c57f70141f99f7920c008809925393e181a51
 const busanUrl = `http://apis.data.go.kr/6260000/RecommendedService/getRecommendedKr?serviceKey=${serviceKey}&numOfRows=10&pageNo=1&resultType=json`;
 
 const gyeongnamUrl = `http://apis.data.go.kr/6480000/gyeongnamtourculture/gyeongnamtourculturelist?serviceKey=${serviceKey}&numOfRows=10&pageNo=1&resultType=json`;
-*/
+
 const url = 'http://localhost:8080/api/board/list';
-export const BoardStateContext = React.createContext();
+export const BoardStateContext = React.createContext();*/
+
+const url = 'http://localhost:8080/api/todo/list';
 
 const App = () => {
   /*const [result, setResult] = useState([]);
@@ -60,7 +62,7 @@ const App = () => {
         </stateContext.Provider>
       </>
     );
-  }*/
+  }
 
   const [isDataLoaded, setIsDataLoaded] = useState(false);
   const [result, setResult] = useState([]);
@@ -87,7 +89,18 @@ const App = () => {
         </BoardStateContext.Provider>
       </>
     );
-  }
+  }*/
+ useEffect(() => {
+  fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => console.log(error));
+ },[]);
+  return (
+    <div className="App"></div>
+  );
 };
 
 export default App;
