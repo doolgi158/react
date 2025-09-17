@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createSearchParams, useNavigate, useSearchParams } from "react-router-dom";
 
 const getNum = (param, defaultValue) => {
@@ -10,6 +11,7 @@ const getNum = (param, defaultValue) => {
 
 const useCustomMove = () => {
     const navigate = useNavigate();
+    const [refresh, setRefresh] = useState(false);
     const [queryParams] = useSearchParams();
 
     const page = getNum(queryParams.get('page'), 1);
@@ -33,6 +35,8 @@ const useCustomMove = () => {
             pathname: `../list`,
             search: queryStr
         });
+
+        setRefresh(!refresh)
     };
 
     const moveToModify = (num) => {
@@ -43,11 +47,20 @@ const useCustomMove = () => {
         })
     };
 
+    /*const moveToRead = (num) => {
+        console.log(queryDefault)
+    };*/
+
+    // 조회 페이지 이동
     const moveToRead = (num) => {
         console.log(queryDefault)
+        navigate({
+            pathname: `../read/${num}`,
+            search: queryDefault
+        })
     };
 
-    return {moveToList, moveToModify, moveToRead, page, size};
+    return {moveToList, moveToModify, moveToRead, page, size, refresh};
 }
 
 export default useCustomMove;

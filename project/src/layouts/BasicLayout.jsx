@@ -7,13 +7,12 @@ const BasicLayout = ({children}) => {
             <BasicMenu />
 
             {/* 상단 여백 my-5 제거 */}
-            <div className="bg-white my-5 w-full flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
-                <main className="bg-sky-300 md:w-2/3 lg:w-3/4 px-5 py-5">
+            <div className="w-full flex flex-col md:flex-row gap-4 p-4 bg-gray-50 min-h-screen">
+                <main className="flex-1 bg-white rounded-2xl shadow-sm px-6 py-8">
                     {children}
                 </main>
-
-                <aside className="bg-green-300 md:w-1/3 lg:w-1/4 px-5 py-5">
-                    <h1 className="text-2xl md:text-4xl">Sidebar</h1>
+                <aside className="w-full md:w-1/4 bg-white rounded-2xl shadow-sm px-6 py-8">
+                    <h1 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Sidebar</h1>
                 </aside>
             </div>
         </>

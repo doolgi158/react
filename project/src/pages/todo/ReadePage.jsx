@@ -9,7 +9,7 @@ const ReadPage = () => {
             <div className="text-2xl">
                 Todo Read Page Component {tno}
             </div>
-            <ReadComponent tno={tno}></ReadComponent>
+            <ReadComponent tno={tno}></ReadComponent>           
         </div>
     );
 }

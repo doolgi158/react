@@ -21,3 +21,8 @@ export const getList = async(pageParm) => {
     );
     return response.data;
 }
+
+export const postAdd = async(todoObject) => {
+    const response = await axios.post(`${prefix}/`, todoObject)
+    return response.data
+}

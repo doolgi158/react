@@ -14,17 +14,17 @@ const IndexPage = () => {
     })
     return (
         <BasicLayout>
-            <div className="w-full flex m-2 p-2">
-                <div className="text-xl m-1 p-2 w-20 font-extrabold text-center underline"
+            <div className="w-full flex flex-col md:flex-row items-center justify-center gap-4 my-4">
+                <div className="px-6 py-2 text-lg font-bold text-gray-700 bg-white border border-gray-300 rounded-full shadow-sm hover:bg-blue-500 hover:text-white transition-colors"
                     onClick={handleClickList}>
                     LIST
                 </div>
-                <div className="text-xl m-1 p-2 w-20 font-extrabold text-center underline"
+                <div className="px-6 py-2 text-lg font-bold text-gray-700 bg-white border border-gray-300 rounded-full shadow-sm hover:bg-green-500 hover:text-white transition-colors"
                     onClick={handleClickAdd}>
                     ADD
                 </div>
             </div>
-            <div className="flex flex-wrap w-full">
+            <div className="w-full p-4 bg-white rounded-xl shadow-sm">
                 <Outlet/>
             </div>
         </BasicLayout>
