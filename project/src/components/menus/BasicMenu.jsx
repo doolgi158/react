@@ -2,24 +2,24 @@ import { Link } from "react-router-dom";
 
 const BasicMenu = () => {
     return (
-        <nav id="navbar" className="w-full bg-white shadow-sm">
+        <nav id="navbar" className="w-full bg-white border-b border-gray-200 shadow-md">
             <div className="container mx-auto flex items-center justify-between px-6 py-4">
                 <ul className="flex items-center space-x-8 text-gray-700 font-semibold">
                     <li>
-                        <Link to={"/"} className="text-lg hover:text-blue-500 transition-colors">Main</Link>
+                        <Link to={"/"} className="text-lg hover:text-blue-600 transition-colors">Main</Link>
                     </li>
                     <li>
-                        <Link to={"/about"} className="text-lg hover:text-blue-500 transition-colors">About</Link>
+                        <Link to={"/about"} className="text-lg hover:text-blue-600 transition-colors">About</Link>
                     </li>
                     {/* /todo/ 작성 시작 시 */}
                     <li>
-                        <Link to={'/todo/'} className="text-lg hover:text-blue-500 transition-colors">Todo</Link>
+                        <Link to={'/todo/'} className="text-lg hover:text-blue-600 transition-color">Todo</Link>
                     </li>
                 </ul>
             </div>
 
             <div>
-                <div className="px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-full shadow hover:bg-blue-600 transition-colors">
+                <div className="px-5 py-2 text-sm font-medium text-white bg-blue-500 rounded-full shadow hover:bg-blue-600 transition">
                     Login
                 </div>
             </div>

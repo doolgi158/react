@@ -45,56 +45,52 @@ const AddComponent = () => {
     }
 
     return ( 
-        <div className = "border-2 border-sky-200 mt-10 m-2 p-4"> 
+        <div className = "max-w-2xl mx-auto mt-10 bg-white rounded-xl border border-gray-200 shadow-md p-8"> 
             {/* 모달 처리 */}
             {result ? <ResultModal title={'Add Result'} content={`New ${result} Added`} callbackFn={closeModal}/> : <></>}
 
-            <div className="flex justify-center">
-                <div className="relative mb-4 flex w-full flex-wrap items-stretch">
-                    <div className="w-1/5 p-6 text-right font-bold">TITLE</div>
-                    <input className="w-4/5 p-6 rounded-r border border-solid border-neutral-500 shadow-md" 
-                        name="title"
-                        type={'text'} 
-                        value={todo.title}
-                        onChange={handleChangeTodo}
-                    ></input>
-                </div>
+            <div className="mb-5">
+                <div className="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wide">TITLE</div>
+                <input className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm 
+                                 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                    name="title"
+                    type={'text'} 
+                    value={todo.title}
+                    onChange={handleChangeTodo}
+                ></input>
             </div>
             
-            <div className="flex justify-center">
-                <div className="relative mb-4 flex w-full flex-wrap items-stretch">
-                    <div className="w-1/5 p-6 text-right font-bold">WRITER</div>
-                    <input className="w-4/5 p-6 rounded-r border border-solid border-neutral-500 shadow-md" 
-                        name="writer"
-                        type={'text'} 
-                        value={todo.writer}
-                        onChange={handleChangeTodo}
-                    ></input>
-                </div>
+            <div className="mb-5">
+                <div className="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wide">WRITER</div>
+                <input className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm 
+                                 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                    name="writer"
+                    type={'text'} 
+                    value={todo.writer}
+                    onChange={handleChangeTodo}
+                ></input>
             </div>
 
-            <div className="flex justify-center">
-                <div className="relative mb-4 flex w-full flex-wrap items-stretch">
-                    <div className="w-1/5 p-6 text-right font-bold">DUEDATE</div>
-                    <input className="w-4/5 p-6 rounded-r border border-solid border-neutral-500 shadow-md" 
-                        name="dueDate"
-                        type={'date'} 
-                        value={todo.dueDate}
-                        onChange={handleChangeTodo}
-                    ></input>
-                </div>
+            <div className="mb-8">
+                <div className="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wide">DUEDATE</div>
+                <input className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm 
+                                 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                    name="dueDate"
+                    type={'date'} 
+                    value={todo.dueDate}
+                    onChange={handleChangeTodo}
+                ></input>
             </div>
             
             <div className="flex justify-end">
-                <div className="relative mb-4 flex p-4 flex-wrap items-stretch">
-                    <button 
-                        type="button" 
-                        className="rounded p-4 w-36 bg-blue-500 text-xl  text-white "
-                        onClick={handleClickAdd}
-                    >
-                        ADD
-                    </button>
-                </div>
+                <button 
+                    type="button" 
+                    className="px-6 py-3 bg-blue-600 hover:bg-blue-700 
+                            text-white text-lg font-semibold rounded-lg shadow-md transition"
+                    onClick={handleClickAdd}
+                >
+                    ADD
+                </button>
             </div>
         </div>
     );

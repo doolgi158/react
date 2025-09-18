@@ -22,24 +22,25 @@ const ReadComponent = ({tno}) => {
     }, [tno])
 
     return (
-        <div className="border-2 border-sky-200 mt-10 m-2 p-4">
-            {makeDiv('Tno', todo.tno)}
-            {makeDiv('Writer', todo.writer)}
-            {makeDiv('Title', todo.title)}
-            {makeDiv('Due Date', todo.dueDate)}
-            {makeDiv('Complete', todo.complete ? 'Completed' : 'Not Yet')}
-
+        <div className="bg-white border border-gray-300 shadow-lg rounded-xl mt-10 m-4 p-6">
+            <div className="space-y-4">
+                {makeDiv('Tno', todo.tno)}
+                {makeDiv('Writer', todo.writer)}
+                {makeDiv('Title', todo.title)}
+                {makeDiv('Due Date', todo.dueDate)}
+                {makeDiv('Complete', todo.complete ? 'Completed' : 'Not Yet')}
+            </div>
             {/* buttons...start */}
             <div className="flex justify-end p-4">
                 <button type="button"
-                    className="rounded p-4 m-2 text-xl w-32 text-white bg-blue-500"
+                    className="rounded-lg p-3 m-2 text-lg w-32 text-white bg-gray-600 hover:bg-gray-700 shadow-md"
                     onClick={() => moveToList()}
                 >
                     List
                 </button>
 
                 <button type="button"
-                    className="rounded p-4 m-2 text-xl w-32 text-white bg-red-500"
+                    className="rounded-lg p-3 m-2 text-lg w-32 text-white bg-blue-600 hover:bg-blue-700 shadow-md"
                     onClick={() => moveToModify(tno)}
                 >
                     Modify
@@ -50,12 +51,10 @@ const ReadComponent = ({tno}) => {
 };
 
 const makeDiv = (title, value) => 
-    <div className="flex justify-center">
-        <div className="relative mb-4 flex w-full flex-wrap items-stretch">
-            <div className="w-1/5 p-6 text-right font-bold">{title}</div>
-            <div className="w-4/5 p-6 rounded-r border border-solid shadow-md">
-                {value}
-            </div>
+    <div className="flex items-center">
+        <div className="w-1/4 text-right font-semibold text-gray-600 pr-4">{title}</div>
+        <div className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-gray-800 shadow-sm">
+            {value}
         </div>
     </div>
 

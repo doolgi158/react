@@ -20,9 +20,19 @@ export const getList = async(pageParm) => {
         {params: {page:page, size:size}}
     );
     return response.data;
-}
+};
 
 export const postAdd = async(todoObject) => {
     const response = await axios.post(`${prefix}/`, todoObject)
     return response.data
-}
+};
+
+export const deleteOne = async(tno) => {
+    const response = await axios.delete(`${prefix}/${tno}`);
+    return response.data;
+};
+
+export const putOne = async(todo) => {
+    const response = await axios.put(`${prefix}/${todo.tno}`, todo);
+    return response.data;
+};
