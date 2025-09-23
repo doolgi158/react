@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const BasicMenu = () => {
+    const loginState = useSelector(state => state.loginSlice);
+
     return (
         <nav id="navbar" className="w-full bg-white border-b border-gray-200 shadow-md">
             <div className="container mx-auto flex items-center justify-between px-6 py-4">
@@ -11,17 +14,30 @@ const BasicMenu = () => {
                     <li>
                         <Link to={"/about"} className="text-lg hover:text-blue-600 transition-colors">About</Link>
                     </li>
-                    {/* /todo/ 작성 시작 시 */}
-                    <li>
-                        <Link to={'/todo/'} className="text-lg hover:text-blue-600 transition-color">Todo</Link>
-                    </li>
+                    {
+                        loginState.email ?  // 로그인한 사용자만 출력되는 메뉴
+                            <>
+                            
+                                <li>
+                                    <Link to={'/todo/'} className="text-lg hover:text-blue-600 transition-color">Todo</Link>
+                                </li>
+                            </>
+                        :
+                        <></>
+                    }
                 </ul>
             </div>
 
-            <div>
-                <div className="px-5 py-2 text-sm font-medium text-white bg-blue-500 rounded-full shadow hover:bg-blue-600 transition">
-                    Login
-                </div>
+            <div className="px-6 py-3 text-sm font-semibold text-white bg-blue-500 rounded-xl shadow-md hover:bg-blue-600 transition">
+                {!loginState.email ?
+                    <div className="block text-center">
+                        <Link to={'/member/login'}>
+                            Login
+                        </Link>
+                    </div>
+                    :
+                    <></>
+                }
             </div>
         </nav>
     );

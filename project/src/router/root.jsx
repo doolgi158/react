@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import todoRouter from "./todoRouter";
+import memberRouter from "./memberRouter";
 
 // 아직 컴포넌트의 처리가 끝나지 않았다면 화면에 'Loading...' 메시지를 보여준다.
 const Loading = <div>Loading...</div>
@@ -30,6 +31,10 @@ const root = createBrowserRouter([
             }
         ]*/
        children: todoRouter()
+    },
+    {
+        path: "member",
+        children: memberRouter()
     }
 ]);
 
