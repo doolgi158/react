@@ -28,15 +28,19 @@ const BasicMenu = () => {
                 </ul>
             </div>
 
-            <div className="px-6 py-3 text-sm font-semibold text-white bg-blue-500 rounded-xl shadow-md hover:bg-blue-600 transition">
+            <div className="px-6 py-3 text-sm font-semibold text-white rounded-xl shadow-md transition">
                 {!loginState.email ?
                     <div className="block text-center">
-                        <Link to={'/member/login'}>
+                        <Link to={'/member/login'}
+                        className="px-6 py-3 text-sm font-semibold text-white bg-blue-500 rounded-xl shadow-md hover:bg-blue-600 transition block text-center">
                             Login
                         </Link>
                     </div>
                     :
-                    <></>
+                    <div className="text-white text-sm m-1 rounded">
+                        <Link to={'/member/logout'}
+                        className="px-6 py-3 text-sm font-semibold text-white bg-red-500 rounded-xl shadow-md hover:bg-red-600 transition block text-center">Logout</Link>
+                    </div>
                 }
             </div>
         </nav>

@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { login } from "../../slice/loginSlice";
-import { useDispatch } from "react-redux";
+import useCustomLogin from "../../hooks/useCustomLogin";
 
 const initState = {
     email: '',
@@ -9,15 +8,25 @@ const initState = {
 
 const LoginComponent = () => {
     const [loginParam, setLoginParam] = useState({...initState});
-    const dispatch = useDispatch();
+
+    const {doLogin, moveToPath} = useCustomLogin();
 
     const handleChange = (e) => {
         loginParam[e.target.name] = e.target.value;
         setLoginParam({...loginParam});
     };
 
-    const handleClickLogin = (e) => {
-        dispatch(login(loginParam));
+    const handleClickLogin = () => {
+        doLogin(loginParam) // loginSlice의 비동기 호출
+        .then(data => {
+            console.log(data);
+            if(data.error){
+                alert("이메일과 패스워드를 다시 확인해 주세요.");
+            }else {
+                alert("로그인 성공");
+                moveToPath('/');
+            }
+        });
     };
 
     return (
